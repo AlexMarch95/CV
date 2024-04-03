@@ -41,7 +41,7 @@ a {
   border-bottom: 0;
   color: black;
   margin: 0 10px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
 }
 .header-container .nav-list .nav-link:hover {
@@ -131,15 +131,19 @@ a {
 .information .section {
   padding-left: 10px;
 }
-.information .section a {
+.information .section .summary-text {
+  line-height: 1.5;
+}
+.information .section i {
   color: rgba(42, 125, 26, 0.586);
 }
 .information .section p {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1;
   color: black;
+  letter-spacing: 1px;
 }
 .information .section h1 {
   margin: 15px 0;
@@ -147,4 +151,8 @@ a {
   font-size: 24px;
   color: rgba(42, 125, 26, 0.586);
   letter-spacing: 2px;
+}
+
+code {
+  white-space: pre;
 }
