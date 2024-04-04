@@ -128,13 +128,20 @@ a {
   border-bottom: 1px solid #672f2f;
   width: 90%;
 }
+.information .english {
+  border: none;
+}
+.information .education {
+  border: none;
+}
 .information .section {
   padding-left: 10px;
 }
-.information .section .summary-text {
+.information .section .text {
   line-height: 1.5;
 }
 .information .section i {
+  word-spacing: -1px;
   color: rgba(42, 125, 26, 0.586);
 }
 .information .section p {
@@ -155,4 +162,50 @@ a {
 
 code {
   white-space: pre;
+}
+
+footer {
+  background-color: rgba(42, 125, 26, 0.586);
+  height: 70px;
+}
+footer .container-footer {
+  padding: 8px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer .container-footer .left-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+footer .container-footer .left-side a {
+  color: white;
+  padding: 0 10px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+footer .container-footer .left-side a:hover {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+footer .container-footer img {
+  width: 80px;
+  height: 50px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+footer .container-footer img:hover {
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
