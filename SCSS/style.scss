@@ -53,7 +53,7 @@ a {
 }
 
 .title-container {
-    margin-top: 50px;
+    margin: 50px 50px 0 50px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -149,9 +149,10 @@ a {
             font-family: 'Roboto', sans-serif;
             font-size: 18px;
             font-weight: normal;
-            line-height: 1;
+            line-height: 1.5;
             color: black;
             letter-spacing: 1px;
+            margin: 10px 0;
         }
 
         h1 {
@@ -161,6 +162,8 @@ a {
             color: $green-color;
             letter-spacing: 2px;
         }
+
+
     }
 }
 
@@ -206,4 +209,44 @@ footer {
             }
         }
     }
+}
+
+@media screen and (max-width:860px) {
+    .header-container {
+        height: 50px;
+        padding: 0 20px;
+
+        .nav-list {
+            visibility: hidden;
+        }
+    }
+
+    .information {
+        grid-template-columns: 1fr;
+
+        .education {
+            border-bottom: 1px solid #672f2f;
+        }
+    }
+
+    .title-container {
+        flex-direction: column;
+        margin-top: 30px;
+
+    }
+
+    footer {
+        height: 90px;
+
+        .container-footer {
+            flex-direction: column;
+            gap: 10px;
+            padding-bottom: 0;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
 }

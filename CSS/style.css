@@ -50,7 +50,7 @@ a {
 }
 
 .title-container {
-  margin-top: 50px;
+  margin: 50px 50px 0 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -148,9 +148,10 @@ a {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: normal;
-  line-height: 1;
+  line-height: 1.5;
   color: black;
   letter-spacing: 1px;
+  margin: 10px 0;
 }
 .information .section h1 {
   margin: 15px 0;
@@ -208,4 +209,41 @@ footer .container-footer img {
 footer .container-footer img:hover {
   -webkit-filter: invert(1);
           filter: invert(1);
+}
+
+@media screen and (max-width: 860px) {
+  .header-container {
+    height: 50px;
+    padding: 0 20px;
+  }
+  .header-container .nav-list {
+    visibility: hidden;
+  }
+  .information {
+    grid-template-columns: 1fr;
+  }
+  .information .education {
+    border-bottom: 1px solid #672f2f;
+  }
+  .title-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 30px;
+  }
+  footer {
+    height: 90px;
+  }
+  footer .container-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+    padding-bottom: 0;
+  }
+  footer .container-footer p {
+    margin: 0;
+  }
 }
