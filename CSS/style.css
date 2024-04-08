@@ -3,12 +3,23 @@ body {
   margin: 0;
 }
 
+.body-wrapper {
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
+
 .header {
-  background-color: rgba(42, 125, 26, 0.586);
+  background-color: #829985;
+}
+
+main {
+  padding: 0 20px;
 }
 
 a {
   text-decoration: none;
+  color: #829985;
   cursor: pointer;
 }
 
@@ -17,6 +28,9 @@ a {
   margin: 0 auto;
 }
 
+.header-container {
+  height: 70px;
+}
 .header-container .nav-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -28,6 +42,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   list-style: none;
+  height: 70px;
   margin: 0;
   padding: 0;
 }
@@ -35,9 +50,8 @@ a {
   padding: 5px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  line-height: 70px;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   border-bottom: 0;
   color: black;
   margin: 0 10px;
@@ -46,11 +60,13 @@ a {
 }
 .header-container .nav-list .nav-link:hover {
   color: white;
-  width: 100%;
+}
+.header-container .burger-menu {
+  display: none;
 }
 
 .title-container {
-  margin: 50px 50px 0 50px;
+  padding: 50px 30px 35px 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,11 +85,13 @@ a {
   background-image: url(/assets/myPhoto.jpg);
   background-position: 0% 55%;
   background-size: 100%;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
   -webkit-transform: scale(0.8);
       -ms-transform: scale(0.8);
           transform: scale(0.8);
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 .title-container .avatar:hover {
   -webkit-transform: scale(1);
@@ -113,8 +131,8 @@ a {
 }
 .title-container .name hr {
   border: none;
-  background-color: rgba(42, 125, 26, 0.586);
-  color: rgba(42, 125, 26, 0.586);
+  background-color: #829985;
+  color: #829985;
   width: 200px;
   height: 2px;
 }
@@ -140,9 +158,14 @@ a {
 .information .section .text {
   line-height: 1.5;
 }
+.information .section a :hover {
+  color: black;
+}
 .information .section i {
   word-spacing: -1px;
-  color: rgba(42, 125, 26, 0.586);
+  color: #829985;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .information .section p {
   font-family: "Roboto", sans-serif;
@@ -157,7 +180,7 @@ a {
   margin: 15px 0;
   font-weight: 499;
   font-size: 24px;
-  color: rgba(42, 125, 26, 0.586);
+  color: #829985;
   letter-spacing: 2px;
 }
 
@@ -166,11 +189,11 @@ code {
 }
 
 footer {
-  background-color: rgba(42, 125, 26, 0.586);
+  background-color: #829985;
   height: 70px;
 }
 footer .container-footer {
-  padding: 8px 0;
+  padding: 8px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -212,12 +235,26 @@ footer .container-footer img:hover {
 }
 
 @media screen and (max-width: 860px) {
-  .header-container {
-    height: 50px;
-    padding: 0 20px;
+  .close {
+    display: none;
   }
-  .header-container .nav-list {
-    visibility: hidden;
+  .header-container {
+    min-height: 50px;
+  }
+  .header-container .nav {
+    position: absolute;
+    right: -250px;
+    top: 0;
+  }
+  .header-container .nav .nav-list {
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 250px;
+    height: 250px;
+  }
+  .header-container .nav .nav-list .nav-item {
+    margin: 15px;
   }
   .information {
     grid-template-columns: 1fr;
@@ -242,6 +279,9 @@ footer .container-footer img:hover {
             flex-direction: column;
     gap: 10px;
     padding-bottom: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   footer .container-footer p {
     margin: 0;

@@ -1,5 +1,5 @@
 $space-div: 25px;
-$green-color: rgba(42, 125, 26, 0.586);
+$green-color: #829985;
 
 
 body {
@@ -7,14 +7,27 @@ body {
     margin: 0;
 }
 
-.header {
-    background-color: rgba(42, 125, 26, 0.586);
+.body-wrapper {
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+}
 
+.header {
+    background-color: $green-color;
+
+}
+
+main {
+    padding: 0 20px;
 }
 
 a {
     text-decoration: none;
+    color: $green-color;
     cursor: pointer;
+
+
 }
 
 
@@ -24,19 +37,22 @@ a {
 }
 
 .header-container {
+    height: 70px;
+
     .nav-list {
         display: flex;
         justify-content: flex-end;
         align-items: center;
         list-style: none;
+        height: 70px;
         margin: 0;
         padding: 0;
 
         .nav-link {
             padding: 5px;
             transition: 0.3s;
-            line-height: 70px;
-            transition: 1s;
+            // line-height: 70px;
+            transition: 0.5s;
             border-bottom: 0;
             color: black;
             margin: 0 10px;
@@ -46,14 +62,17 @@ a {
 
             &:hover {
                 color: white;
-                width: 100%;
             }
         }
+    }
+
+    .burger-menu {
+        display: none;
     }
 }
 
 .title-container {
-    margin: 50px 50px 0 50px;
+    padding: 50px 30px 35px 30px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -69,8 +88,9 @@ a {
         background-image: url(/assets/myPhoto.jpg);
         background-position: 0% 55%;
         background-size: 100%;
-        transition: 1s;
+        transition: 0.7s;
         transform: scale(0.8);
+        box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
 
 
         &:hover {
@@ -140,10 +160,18 @@ a {
             line-height: 1.5;
         }
 
+        a :hover {
+            color: black
+        }
+
+
         i {
             word-spacing: -1px;
             color: $green-color;
+            transition: 0.5s;
         }
+
+
 
         p {
             font-family: 'Roboto', sans-serif;
@@ -176,7 +204,7 @@ footer {
     height: 70px;
 
     .container-footer {
-        padding: 8px 0;
+        padding: 8px 10px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -212,13 +240,38 @@ footer {
 }
 
 @media screen and (max-width:860px) {
-    .header-container {
-        height: 50px;
-        padding: 0 20px;
+    .close {
+        display: none;
+    }
 
-        .nav-list {
-            visibility: hidden;
+    .header-container {
+        min-height: 50px;
+
+
+        .nav {
+
+            position: absolute;
+            right: -250px;
+            top: 0;
+
+            .nav-list {
+
+                position: relative;
+                display: block;
+                text-align: center;
+                width: 250px;
+                height: 250px;
+
+                .nav-item {
+                    margin: 15px;
+
+                    .nav-link {}
+                }
+
+
+            }
         }
+
     }
 
     .information {
@@ -242,6 +295,7 @@ footer {
             flex-direction: column;
             gap: 10px;
             padding-bottom: 0;
+            justify-content: space-between;
 
             p {
                 margin: 0;
